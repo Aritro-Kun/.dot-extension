@@ -1,0 +1,29 @@
+{
+    "manifest_version":3,
+    "name": ".DOT",
+    "version": "1.0.0",
+    "description": "Converts your amazon.com links to amazon.in.",
+    "permissions": ["activeTab", "tabs", "scripting"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.amazon.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "D.png",
+            "48": "D.png",
+            "128": "D.png"
+        }
+    },
+    "icons": {
+        "16": "D.png",
+        "48": "D.png",
+        "128": "D.png"
+    }
+}
